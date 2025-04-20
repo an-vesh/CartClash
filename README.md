@@ -94,11 +94,7 @@ Contributions are welcome! Please fork the repo and submit a pull request. For i
 
 ## 👤 Author
 
-**Alok Kumar**  
 **Anvesh Mishra**
+**Alok Kumar**  
 **Pallavi Jaiswal**
 **Devesh Jaiswal**
-
-## 📜 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
