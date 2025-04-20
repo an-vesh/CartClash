@@ -45,3 +45,41 @@ CREATE TABLE customers (
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
+
+🔑 Key Fields
+id : Unique identifier for each customer
+
+name : Customer's full name
+
+email : Customer's email address (must be unique)
+
+phone : Customer's phone number (exactly 10 digits)
+
+balance : Customer's current account balance
+
+⏱️ Timestamps for record creation and updates
+
+🔁 Data Flow
+📡 API Communication
+The core of the application's data flow is the API communication layer, implemented in PHP. It handles:
+
+Fetching product data from multiple platforms
+
+Comparing prices
+
+Managing user authentication and data
+
+Getting Started
+Clone the repo
+
+bash
+Copy
+Edit
+git clone https://github.com/an-vesh/CartClash
+Set up a local server (e.g., XAMPP, MAMP)
+
+Import the SQL file to your MySQL database
+
+Update DB credentials in the backend config files
+
+Open the project in your browser
