@@ -1,47 +1,104 @@
-# 🛒 CartClash – Smart Price Comparison Website 💥
+# 💰 GeM Price Comparison Website
 
-**CartClash** is a powerful web application that lets users **compare prices** of products listed on **GeM (Government e-Marketplace)** with **Amazon** and **Flipkart**, helping them find the best deals with ease.
+A web application to compare product prices on the Government e-Marketplace (GeM) with other e-marketplaces like Amazon, Flipkart, etc. The goal is to help buyers make informed purchasing decisions by tracking and analyzing price changes over time.
 
-🔗 **Live Repo:** [github.com/an-vesh/CartClash](https://github.com/an-vesh/CartClash)
+## 📦 Features
 
----
+- 🔐 **User Authentication** (Register/Login/Password Reset)
+- 📊 **Product Price Comparison** (GeM vs other e-marketplaces)
+- ⏱️ **Price History Tracking** with Graphs
+- 📬 **Email & SMS Alerts** for Price Drops
+- 📱 **Mobile-Friendly Dashboard** for Users
+- ⚙️ **Admin Panel** to Manage Products
+- 💾 **Database Integration** for Storing Prices & User Data
+- 💳 **Razorpay Integration** for Payments (and PhonePe QR Support)
+- 📨 **Contact Form** with Optional Email Notification
 
-## 🔥 Features
+## 🗂️ Project Structure
 
-- 🔍 Real-time **price comparison**
-- 🧾 **User authentication**: Login & Register
-- 💖 Add products to your **wishlist**
-- ⚙️ Update your **profile**
-- 📬 **Contact Us** form for feedback & queries
-- 💾 **Data stored in MySQL database**
-- 🌐 Fully **responsive design** for all devices
+```
+gem_price_comparison_website/
+│
+├── gem/                         # Main project folder (frontend + PHP backend)
+│   ├── login/                   # Login and registration pages
+│   ├── compare/                 # Product comparison pages
+│   ├── dashboard/               # User dashboard with price tracking
+│   ├── admin/                   # Admin functionality to manage products
+│   ├── includes/                # PHP scripts for DB connection and utilities
+│   └── assets/                  # CSS, JS, images
+│
+├── payment/                     # Razorpay & PhonePe payment integrations
+│
+├── database.sql                 # Database schema
+├── README.md                    # Project documentation (this file)
+└── .env                         # Environment variables (not tracked in Git)
+```
 
----
+## ⚙️ Tech Stack
 
-## 💻 Tech Stack
+- **Frontend**: HTML5, Tailwind CSS, JavaScript
+- **Backend**: PHP
+- **Database**: MySQL
+- **Payment Gateway**: Razorpay, PhonePe QR
+- **Alerts**: SMTP for email, Twilio (or similar) for SMS
 
-### Frontend  
-- HTML  
-- Tailwind CSS  
-- JavaScript  
+## 🚀 Getting Started
 
-### Backend  
-- PHP  
-- MySQL  
+### 1. Clone the Repository
 
----
+```bash
+git clone https://github.com/Alokkumarlpu/Gem_price_comparison_website.git
+cd Gem_price_comparison_website
+```
 
-## 🗃️ Database Schema
+### 2. Setup Database
 
-The core database table is `customers`, defined as:
+- Import the `database.sql` file into your MySQL server
+- Update DB credentials in `includes/db.php`
 
-```sql
-CREATE TABLE customers (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(100) NOT NULL,
-  email VARCHAR(100) UNIQUE,
-  phone VARCHAR(10),  -- Limited to exactly 10 digits
-  balance DECIMAL(10, 2) DEFAULT 0,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-);
+### 3. Configure Environment Variables
+
+Create a `.env` file (if required) for sensitive keys like:
+
+```env
+DB_HOST=localhost
+DB_USER=root
+DB_PASS=yourpassword
+DB_NAME=gem_db
+
+RAZORPAY_KEY=your_key
+RAZORPAY_SECRET=your_secret
+
+SMTP_USER=your_email
+SMTP_PASS=your_email_password
+```
+
+### 4. Run Locally
+
+Use XAMPP or similar to host the project locally and access via:
+
+```
+http://localhost/gem_price-comparison/
+```
+
+## 📈 Future Enhancements
+
+- AI-powered product suggestions
+- More marketplace integrations
+- Advanced analytics for price patterns
+- Browser extension for instant comparison
+
+## 📮 Feedback & Contribution
+
+Contributions are welcome! Please fork the repo and submit a pull request. For issues or suggestions, feel free to open an issue.
+
+## 👤 Author
+
+**Alok Kumar**  
+**Anvesh Mishra**
+**Pallavi Jaiswal**
+**Devesh Jaiswal**
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
